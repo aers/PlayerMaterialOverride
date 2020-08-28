@@ -1,0 +1,11 @@
+{
+  "Author": "aers",
+  "Name": "Player Material Override",
+  "Description": "Plugin for overriding material loads for the player character model.",
+  "InternalName": "PlayerMaterialOverride",
+  "AssemblyVersion": "1.0.0.0",
+  "RepoUrl": "https://github.com/aers/PlayerMaterialOverride",
+  "ApplicableVersion": "any",
+  "Tags": ["texture", "override"],
+  "DalamudApiLevel": 1
+}
