@@ -7,15 +7,15 @@ using System.Runtime.InteropServices;
 
 namespace PlayerMaterialOverride.Structs
 {
-    // FileMDL - representation of "mdl" file
-    public class FileMDLOffsets
+    // Client::Graphics::Render::Material
+    public class RenderMaterialOffsets
     {
-        public const int FileNameString = 0x48;
+        public const int MTRL = 0x10;
     }
-    
+
     [StructLayout(LayoutKind.Explicit)]
-    public unsafe struct FileMDL
+    public unsafe struct RenderMaterial
     {
-        [FieldOffset(FileMDLOffsets.FileNameString)] public char* FileNameString;
+        [FieldOffset(RenderMaterialOffsets.MTRL)] public MaterialResourceHandle* MTRL;
     }
 }

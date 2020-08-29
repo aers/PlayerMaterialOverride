@@ -7,8 +7,8 @@ using System.Runtime.InteropServices;
 
 namespace PlayerMaterialOverride.Structs
 {
-    // Game object Model which represents the model loaded from a mdl file
-    public class ModelOffsets
+    // Client::Graphics::Render::Model
+    public class RenderModelOffsets
     {
         public const int MDL = 0x30;
         public const int MaterialArray = 0x90;
@@ -16,10 +16,10 @@ namespace PlayerMaterialOverride.Structs
     }
 
     [StructLayout(LayoutKind.Explicit)]
-    public unsafe struct Model
+    public unsafe struct RenderModel
     {
-        [FieldOffset(ModelOffsets.MDL)] public FileMDL* MDL;
-        [FieldOffset(ModelOffsets.MaterialArray)] public Material** MaterialArray;
-        [FieldOffset(ModelOffsets.MaterialCount)] public int MaterialCount;
+        [FieldOffset(RenderModelOffsets.MDL)] public ModelResourceHandle* MDL;
+        [FieldOffset(RenderModelOffsets.MaterialArray)] public RenderMaterial** MaterialArray;
+        [FieldOffset(RenderModelOffsets.MaterialCount)] public int MaterialCount;
     }
 }

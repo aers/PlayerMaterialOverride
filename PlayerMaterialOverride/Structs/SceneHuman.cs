@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace PlayerMaterialOverride.Structs
 {
-    // Character3D
+    // Client::Graphics::Scene::Human
     // size - 0xA80
     // ctor - E8 ? ? ? ? 48 8B F8 48 85 C0 74 28 48 8D 55 D7 
-    public class Character3DOffsets
+    public class SceneHumanOffsets
     {
         public const int SlotCount = 0x98;
         public const int ModelArray = 0xA8;
@@ -18,10 +18,10 @@ namespace PlayerMaterialOverride.Structs
     }
 
     [StructLayout(LayoutKind.Explicit)]
-    public unsafe struct Character3D
+    public unsafe struct SceneHuman
     {
-        [FieldOffset(Character3DOffsets.SlotCount)] public int SlotCount;
-        [FieldOffset(Character3DOffsets.ModelArray)] public Model** ModelArray;
-        [FieldOffset(Character3DOffsets.MaterialArray)] public Material** MaterialArray;
+        [FieldOffset(SceneHumanOffsets.SlotCount)] public int SlotCount;
+        [FieldOffset(SceneHumanOffsets.ModelArray)] public RenderModel** ModelArray;
+        [FieldOffset(SceneHumanOffsets.MaterialArray)] public RenderMaterial** MaterialArray;
     }
 }

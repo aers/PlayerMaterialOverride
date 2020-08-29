@@ -75,7 +75,7 @@ namespace PlayerMaterialOverride
                 {
                     unsafe
                     {
-                        var pc3D = *(Structs.Character3D**)(pc.Address + 0xF0).ToPointer();
+                        var pc3D = *(Structs.SceneHuman**)(pc.Address + 0xF0).ToPointer();
                         if ((long)pc3D == 0x0)
                             ImGui.Text("Player Character 3D currently unavailable.");
                         else

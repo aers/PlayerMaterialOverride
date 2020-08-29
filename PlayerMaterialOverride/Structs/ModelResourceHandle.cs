@@ -7,15 +7,15 @@ using System.Runtime.InteropServices;
 
 namespace PlayerMaterialOverride.Structs
 {
-    // FileMTRL - representation of "mtrl" file
-    public class FileMTRLOffsets
+    // Client::System::Resource::Handle::ModelResourceHandle
+    public class ModelResourceHandleOffsets
     {
         public const int FileNameString = 0x48;
     }
-
+    
     [StructLayout(LayoutKind.Explicit)]
-    public unsafe struct FileMTRL
+    public unsafe struct ModelResourceHandle
     {
-        [FieldOffset(FileMDLOffsets.FileNameString)] public char* FileNameString;
+        [FieldOffset(ModelResourceHandleOffsets.FileNameString)] public char* FileNameString;
     }
 }

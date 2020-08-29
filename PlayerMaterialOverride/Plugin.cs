@@ -62,9 +62,9 @@ namespace PlayerMaterialOverride
                     return res;
                 }
                 
-                var pc3D = *(Structs.Character3D**)(pc.Address + 0xF0).ToPointer();
+                var pc3D = *(Structs.SceneHuman**)(pc.Address + 0xF0).ToPointer();
 
-                if ((Structs.Character3D*)thisChara3D.ToPointer() == pc3D)
+                if ((Structs.SceneHuman*)thisChara3D.ToPointer() == pc3D)
                 {
                     //PluginLog.Log("is PC");
                     var oe = configuration.Overrides.Find(x => x.Active && x.OriginalMaterial == resAsString);
